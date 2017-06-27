@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset=utf-8 />
@@ -6,7 +6,10 @@
   <style>
    
     
-   
+    #text2, ul{
+      margin:10px;
+    
+    }
  
     
     #text1,h2{
@@ -23,7 +26,7 @@
     var incX = 3;
     var size = 10;
    
-"    // Called after the DOM is ready (page loaded)
+    // Called after the DOM is ready (page loaded)
     function init() {
       // init the different variables
       canvas = document.querySelector("#mycanvas");
@@ -36,7 +39,7 @@
       x=10; y = 10;
       ctx.fillStyle='red';
            
-      // Start animation
+     // Start animation
       animationLoop();
     }
     
@@ -69,17 +72,15 @@
 <body onload="init();">
   <canvas id="mycanvas" width="500" height="50" style="border: 2px solid black"></canvas>
   <div id ="res">   <p><h2>Sonia Singla</h2></p> <p id="text1"> 11 Harrier Road</p><p id ="text1"> Acocks Green</p><p id ="text1">Birmingham</p>
-  <p ><h3> Objective</h3></p><p>Looking for a job where I can apply my skills acquired during studies or Internship.</p>
+  <p id="text2"><h3> Objective</h3></p><p>Looking for a job where I can apply my skills acquired during studies or Internship.</p>
   <p><h3>Education Qualification</h3></p>
   <ul style="list-style-image:url('sq.jpg');">
-    <li  >University of Leicester                MSc in Bioinformatics                  2009- 2010</li>
-    <li >Bangalore University                   MSc in Biotechnology                   2001-2003</li>
-    <li >Himachal Pradesh University            BSc Medical                            1999-2001</li>
+       <li  >University of Leicester                MSc in Bioinformatics                  2009- 2010</li>
+       <li >Bangalore University                   MSc in Biotechnology                   2001-2003</li>
+       <li >Himachal Pradesh University            BSc Medical                            1999-2001</li>
 </ul>
   </div>
-<div class="progress-bar progress-bar-danger" style="width: 10%">
-    <span class="sr-only">10% Complete (danger)</span>
-  </div>
+
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
