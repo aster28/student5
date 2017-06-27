@@ -8,6 +8,8 @@
    
     video{
       padding-left:500px;
+      position:relative;
+      top: 100px;
     }
     #text2, ul{
       margin:20px;
@@ -31,6 +33,7 @@
     var size = 10;
      var video = document.getElementById('sourcevid');
     // Called after the DOM is ready (page loaded)
+    setInterval("processFrame()", 25);
     function init() {
       // init the different variables
       canvas = document.querySelector("#mycanvas");
@@ -44,7 +47,7 @@
       ctx.fillStyle='red';
            
      // Start animation
-      setInterval("processFrame()", 25); 
+       
       animationLoop();
     }
     function processFrame() {                 // Uncomment next line for drawing 100% copy of the video content 
