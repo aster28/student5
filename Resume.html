@@ -27,7 +27,7 @@
     // Move 3 pixels left or right at each frame
     var incX = 3;
     var size = 10;
-   
+     var video = document.getElementById('sourcevid');
     // Called after the DOM is ready (page loaded)
     function init() {
       // init the different variables
@@ -40,10 +40,10 @@
       // default values
       x=10; y = 10;
       ctx.fillStyle='red';
-           
+      animationLoop();     
      // Start animation
       setInterval("processFrame()", 25); 
-      animationLoop();
+      
     }
     function processFrame() { 
                 // Uncomment next line for drawing 100% copy of the video content 
@@ -65,7 +65,7 @@
   
                  // We are going to change the coordinate system, save the context ! 
                  ctx.save(); 
-                 // translate, rotate and recenter the image at its "real" center,  
+<                 // translate, rotate and recenter the image at its "real" center,  
                  //not the top left corner 
                  ctx.translate(x, y); 
                  ctx.rotate(angle += 0.01); 
@@ -110,9 +110,9 @@
   <p id="text2"><h3> Objective</h3></p><p id="text2">Looking for a job where I can apply my skills acquired during studies or Internship.</p>
   <p id="text2"><h3>Education Qualification</h3></p>
   <ul style="list-style-image:url('sq.jpg');">
-       <li  >University of Leicester                MSc in Bioinformatics                  2009- 2010</li>
-       <li >Bangalore University                   MSc in Biotechnology                   2001-2003</li>
-       <li >Himachal Pradesh University            BSc Medical                            1999-2001</li>
+       <li  ><p>University of Leicester                MSc in Bioinformatics                  2009- 2010</p></li>
+       <li ><p>Bangalore University                   MSc in Biotechnology                   2001-2003</p></li>
+       <li ><p>Himachal Pradesh University            BSc Medical                            1999-2001</p></li>
 </ul>
   </div>
 
@@ -120,7 +120,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap.min.js"></script>
-<video id="sourcevid" width="300" height="300" autoplay loop> 
+<video id="sourcevid" width="200" height="200" autoplay loop> 
              <source src="assignment.mp4" type="video/mp4" /> 
             
          </video> 
