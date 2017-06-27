@@ -6,7 +6,9 @@
 <title>JS Bin</title>
   <style>
    
-    
+    video{
+      padding-left:500px;
+    }
     #text2, ul{
       margin:20px;
     
@@ -45,8 +47,7 @@
       setInterval("processFrame()", 25); 
       animationLoop();
     }
-    function processFrame() { 
-                // Uncomment next line for drawing 100% copy of the video content 
+    function processFrame() {                 // Uncomment next line for drawing 100% copy of the video content 
                 //ctx.drawImage(video, 0, 0); 
   
                  // Comment these 4 lines if you uncommented the previous one 
@@ -65,7 +66,7 @@
   
                  // We are going to change the coordinate system, save the context ! 
                  ctx.save(); 
-<                 // translate, rotate and recenter the image at its "real" center,  
+                 // translate, rotate and recenter the image at its "real" center,  
                  //not the top left corner 
                  ctx.translate(x, y); 
                  ctx.rotate(angle += 0.01); 
