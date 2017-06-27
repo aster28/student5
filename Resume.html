@@ -20,6 +20,7 @@
  
   <script>
     var canvas, ctx;
+
     var width, height;
     var x, y;
     // Move 3 pixels left or right at each frame
@@ -42,7 +43,39 @@
      // Start animation
       animationLoop();
     }
-    
+    function processFrame() { 
+                // Uncomment next line for drawing 100% copy of the video content 
+                //ctx.drawImage(video, 0, 0); 
+  
+                 // Comment these 4 lines if you uncommented the previous one 
+  
+       
+  
+                 drawRotatingVideo(480, 90); 
+  
+                 
+             } 
+            
+         
+             function drawRotatingVideo(x, y) { 
+                 // Clear thze zone at the top right quarter of the canvas 
+                 ctx.clearRect(320, 0, 320, 180); 
+  
+                 // We are going to change the coordinate system, save the context ! 
+                 ctx.save(); 
+                 // translate, rotate and recenter the image at its "real" center,  
+                 //not the top left corner 
+                 ctx.translate(x, y); 
+                 ctx.rotate(angle += 0.01); 
+                 ctx.translate(-80, -45); 
+  
+                 ctx.drawImage(video, 0, 0, 160, 90); 
+  
+                 // restore the context 
+                 ctx.restore(); 
+  
+             } 
+
     function animationLoop() {
       // an animation is : 1) clear canvas and 2) draw shapes, 
       // 3) move shapes, 4) recall the loop with requestAnimationFrame
@@ -85,6 +118,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap.min.js"></script>
+<video id="sourcevid" width="300" height="300" autoplay loop> 
+             <source src="assignment.mp4" type="video/mp4" /> 
+            
+         </video> 
 
 </body>
 </html>
