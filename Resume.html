@@ -9,6 +9,7 @@
       left:1200px;
       position:absolute;
       top: 50px;
+      width: 30%;
     }
     #mycanvas{
       align:center;
@@ -100,7 +101,7 @@
       ctx.strokeRect(x, y, size, size);
     
       // move rectangle
-      x += incX;
+     x += incX;
       
       // check collision on left or right
       if(((x+size) > width) || (x <= 0)) {
@@ -126,7 +127,7 @@
   <iframe
   width="200"
   height="250"
-  frameborder="0" style="border:1px solid #FF0000;float:right;margin-right:80px;"
+  frameborder="0" style="border:1px solid #FF0000;float:right;margin-right:100px;"
   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBHBIO5ueL0Y2aHfKVMgGJU0yKspp1dBzc 
     &q=Birmingham+U.K" allowfullscreen>
 </iframe>
