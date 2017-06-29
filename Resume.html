@@ -81,8 +81,7 @@
                  //not the top left corner 
                  ctx.translate(x, y); 
                  ctx.rotate(angle += 0.01); 
-                 ctx.translate(-80, -45); 
-  
+                 ctx.translate(-80, -45);   
                  ctx.drawImage(video, 0, 0, 160, 90); 
   
                  // restore the context 
@@ -116,11 +115,11 @@
   </script>
 </head>
   
-<body onload="init();">
-  <video id="sourcevid" width="200" height="200" autoplay loop> 
-             <source src="assignment.mp4" type="video/mp4" /> 
+<body >
+ <!-- <video id="sourcevid" width="200" height="200" autoplay loop> 
+             <source src="assignment.mp4" type="video/mp4" />
             
-         </video> 
+         </video>  -->
   <canvas id="mycanvas" width="500" height="50" style="border: 2px solid black"></canvas>
   <div id ="res">   <p><h2>Sonia Singla</h2></p> <p id="text1"> </p><p id ="text1"> </p><p id ="text1">Birmingham</p>
   <p id="text2"><h3> Objective</h3></p><p id="text2">Looking for a job where I can apply my skills acquired during studies or Internship.</p>
